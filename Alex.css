@@ -1,0 +1,340 @@
+/* ===== Base Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  background-color: #1db954;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00cfff;
+}
+
+/* ===== Main Content ===== */
+main {
+  padding: 20px;
+  min-height: 80vh; /* Prevents footer overlap */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Card System ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background: #1db954;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #169c46;
+}
+
+/* Genre Cards as Links */
+.genre-card {
+  display: block;
+  width: 250px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.genre-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.genre-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.genre-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.genre-card-content p {
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Horizontal alignment for genre cards */
+.music-grid {
+    display: flex;          /* Horizontal layout */
+    flex-wrap: wrap;        /* Wrap to next line if needed */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px;             /* Space between cards */
+    padding: 20px 0;       /* Vertical padding */
+}
+
+.genre-card {
+    width: 200px;          /* Fixed width for uniformity */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.genre-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.anime-card, .game-card, .sports-card {
+    width: 250px;           /* Fixed width for uniformity */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.anime-card-content, .game-card-content, .sports-card-content {
+    text-align: center;
+    padding: 15px;
+}
+
+.anime-grid, .games-grid, .sports-grid {
+    display: flex;           /* Horizontal alignment */
+    flex-wrap: wrap;         /* Wrap to next row if needed */
+    gap: 20px;              /* Spacing between cards */
+    justify-content: center; /* Center cards in the container */
+}
+/* General Link Styling (Button-Like Appearance) */
+.anime-link, .game-link, .sports-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Optional: Adjust link/button styling */
+.anime-link {
+    display: inline-block; /* Ensures link respects text-align */
+    margin-top: 10px;      /* Adds space above the link */
+}
+
+.anime-card img, .game-card img, .sports-card img {
+    width: 100%;          /* Fill card width */
+    height: auto;         /* Natural height (no fixed height) */
+    max-height: 300px;    /* Prevent overly tall images */
+    object-fit: contain;  /* Show full image (no cropping) */
+    border-radius: 4px;   /* Optional: Soft edges */
+    display: block;       /* Remove extra space below images */
+}
+/* Anime Links (Red Theme) */
+.anime-link {
+    background-color: #e74c3c;
+    color: white;
+}
+.anime-link:hover {
+    background-color: #c0392b;
+}
+
+/* Games Links (Blue Theme) */
+.game-link {
+    background-color: #3498db;
+    color: white;
+}
+.game-link:hover {
+    background-color: #2980b9;
+}
+
+/* Game Card */
+.game-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Sports Links (Purple Theme) */
+.sports-link {
+    background-color: #9b59b6;
+    color: white;
+}
+.sports-link:hover {
+    background-color: #8e44ad;
+}
+/* ===== Page-Specific Styles ===== */
+/* Sports Page */
+.sports-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Sports - Image Sizing */
+.sports-card img {
+    width: 100%;          /* Fill card width */
+    height: auto;         /* Natural height */
+    max-height: 250px;    /* Prevent overly tall images */
+    object-fit: contain;  /* Show full image (no crop) */
+    display: block;       /* Remove extra space below */
+    border-radius: 8px 8px 0 0; /* Match Anime.html */
+}
+
+/* Sports - Centered Content */
+
+
+.sports-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #9b59b6;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+/* Anime Page */
+.anime-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Games Page */
+.games-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Feedback Page */
+.feedback-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.feedback-form-group {
+  margin-bottom: 20px;
+}
+
+.feedback-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.feedback-form-group input,
+.feedback-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.feedback-form-group textarea {
+  min-height: 120px;
+}
+
+.feedback-response {
+  margin-top: 20px;
+  color: #1db954;
+  font-weight: bold;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  
+  main {
+    padding: 15px;
+  }
+
+  .music-grid {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: center;
+    }
+}
