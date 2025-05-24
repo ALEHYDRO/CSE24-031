@@ -338,3 +338,36 @@ footer {
         align-items: center;
     }
 }
+
+/* ===== HOME PAGE (index.html) SPECIFIC FIXES ===== */
+/* Targets the <main> container */
+main.container {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 100%; /* Ensures no overflow */
+}
+
+/* Fixes the welcome section */
+main.container section {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive welcome text */
+main.container h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Scales between 1.5rem and 2.5rem */
+  margin-bottom: 1rem;
+}
+
+main.container p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+/* Responsive image */
+main.container img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px; /* Optional */
+}
